@@ -1,8 +1,5 @@
 package controllers;
 
-import database.ProductDao;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,9 +10,6 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import modelFx.ProductFx;
 import modelFx.ProductModel;
-import models.Product;
-
-import java.util.List;
 
 public class MainController {
 
@@ -66,11 +60,12 @@ public class MainController {
             Stage stage = new Stage();
             stage.setTitle("Dodaj produkt");
             stage.setScene(new Scene(root1));
-            stage.show();
+            stage.showAndWait();
         }
         catch (Exception e) {
             System.out.println("Cant Load new window");
         }
+        showProductsList();
     }
 
     public void editProduct() {
