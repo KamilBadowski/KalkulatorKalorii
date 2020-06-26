@@ -23,7 +23,7 @@ public class AddController {
 
     @FXML
     void initialize() {
-        this.productModel = new ProductModel();
+        this.productModel = new ProductModel();//dodajemy model
 
     }
 
